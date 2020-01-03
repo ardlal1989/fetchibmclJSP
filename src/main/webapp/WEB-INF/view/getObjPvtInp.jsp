@@ -8,7 +8,7 @@
 </head>
 <body>
 <div>
-            <h3> Give details of Object to View</h3>
+            <h3> Give details of Object to View or Download</h3>
             <form action="getObject" method="post">
             <p>Enter endpoint:</p> <input type="text" name="endpoint" />
             <p>Enter bucket name:</p> <input type="text" name="bucketName" />
