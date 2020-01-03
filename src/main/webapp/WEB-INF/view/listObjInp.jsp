@@ -7,12 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div>
-            <h3> Give details of Object to View</h3>
-            <form action="getObject" method="post">
+ <div>
+            <h3> Give details of bucket to view the list of Objects </h3>
+            <form action="listObjects" method="post">
             <p>Enter endpoint:</p> <input type="text" name="endpoint" />
             <p>Enter bucket name:</p> <input type="text" name="bucketName" />
-            <p>Enter object name:</p> <input type="text" name="objectName" />
             <p>Enter access Key:</p> <input type="text" name="accessKey" /><br><br>
             <p>Enter secret Key:</p> <input type="text" name="secretKey" /><br><br>  
                 <input type="submit" value="Submit" />
