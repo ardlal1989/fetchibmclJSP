@@ -69,10 +69,7 @@ public class FetchFromIbmCloudApplication extends SpringBootServletInitializer {
 		  objList.add(obj.getKey());
 		}
 		return objList;
-		//SampleInp
-		//"https://s3.us-east.cloud-object-storage.appdomain.cloud"
-		//final String accessKey = "372b1a02b29047aa999d72c44f6c6be0";
-		//final String secretKey = "db09af915e2822066d05ea0120de275eb3234a41bbb80b6b";
+		
 	}
 
 	@RequestMapping("getObject")
