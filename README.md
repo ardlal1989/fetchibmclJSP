@@ -4,8 +4,7 @@ Spring Boot Utility App to fetch and list objects from IBM Cloud Storage Buckets
 
 # Features
 
-A>This utility helps in fetching objects from any public and private buckets in IBM Cloud Storage. JPG/PNG/GIF objects can be viewed and downloaded. Other object types can
-  be downloaded(You can customize them to view on browser).
+A>This utility helps in fetching objects from any public and private buckets in IBM Cloud Storage. JPG/PNG/GIF objects can be viewed and downloaded. Other object types can be downloaded(One can customize them to view on browser).
   
 B>This utility helps in listing down all objects(name and extension) that are in a public/private bucket.
 
@@ -19,20 +18,19 @@ B>This utility helps in listing down all objects(name and extension) that are in
 
 A> Generate IBM Cloud Access key and Secret key (Include HMAC while generating credentials)
 
-
 B>To install/deploy on Openshift, all that was needed was an accessible Openshift Web Console and oc cli.
 
 To create application war and then dockerize it, below is what is needed:
 
-1>Spring Boot/Eclipse or any other IDE which supports Maven projects.- (To make any customizations if you want or to run in local or create war from IDE)
+1>Spring Boot/Eclipse or any other IDE which supports Maven projects.- (To make any customizations if one wants or to run in local or create war from IDE)
 
 2>Maven installed in local (To build a war)
 
-3>Docker installed in local(If you want to use the docker approach)- To create a container image and push the same in an image registry, which can later be used for deployment.
+3>Docker installed in local(If one wants to use the docker approach)- To create a container image and push the same in an image registry, which can later be used for deployment.
 
 # Steps to Install
 
-I deployed it on Openshift. Here are the steps:
+This deployment was done on Openshift. Here are the steps:
 
 1>Go to Openshift WebConsole
 
@@ -42,8 +40,8 @@ I deployed it on Openshift. Here are the steps:
 
 ![image](https://user-images.githubusercontent.com/50587555/71826785-c67c9c80-30c4-11ea-89ba-f0fb9d253b68.png)
 
-4>Mention the app name of your choice, git repo url, git reference(master if it is kept in your git master branch), context directory value as '.'
-You can leave other fields as is, and click on Next. There you can bind secret or leave it(I did not bind).
+4>Mention the app name of choice, git repo url, git reference(master if it is kept in your git master branch), context directory value as '.'
+Other fields are kept as is.Click on Next. There one can bind secret or leave it(For this case it was not bound).
 
 ![image](https://user-images.githubusercontent.com/50587555/71826839-f166f080-30c4-11ea-8008-274eb33b37eb.png)
 
@@ -51,9 +49,21 @@ You can leave other fields as is, and click on Next. There you can bind secret o
 
 5>Click on Create
 
-6>From oc cli, you can watch the status of your objects such as pods
-  oc get pods -w
+6>From oc cli, one can watch the status of objects such as pods
+  oc login (using token)
+  oc get pods -w -- To view the status of pods
   You can also use web console for the same
+  
+7>Create Route from web console to expose it for external access
+
+
+oc cli can also be used for the same
+
+oc get svc ---> To get the service name
+
+oc expose svc/<service name> ---> To expose it as Route
+  
+oc get route ---> To get the route url
 
 Once it is deployed you can test it. Sample url is:
 
@@ -76,7 +86,7 @@ If you are not using Openshift, but plan to deploy it as a container (Eg using d
 
 Give the necessary input details
 
-![image](https://user-images.githubusercontent.com/50587555/71827120-8d90f780-30c5-11ea-8ae9-d9f7030e65d6.png)
+![image](https://user-images.githubusercontent.com/50587555/71829483-c5e70480-30ca-11ea-892b-881b9e25021c.png)
 
 ![image](https://user-images.githubusercontent.com/50587555/71827297-f4161580-30c5-11ea-8196-a4934cea79ed.png)
 
@@ -84,9 +94,7 @@ Give the necessary input details
 
 Give the necessary input details
 
-![image](https://user-images.githubusercontent.com/50587555/71827162-a9949900-30c5-11ea-9952-c6c4cf6b7f89.png)
-
-
+![image](https://user-images.githubusercontent.com/50587555/71829573-f2028580-30ca-11ea-8e52-849939ee6e7f.png)
 
 ![image](https://user-images.githubusercontent.com/50587555/71827217-c630d100-30c5-11ea-9a9c-5b7fd6a6271c.png)
 
