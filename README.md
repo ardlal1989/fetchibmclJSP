@@ -53,7 +53,7 @@ Other fields are kept as is.Click on Next. There one can bind secret or leave it
 
 Alternatively the above 5 steps can be done through oc cli using the command mentioned below:
 
-oc new-app --template=eap72-basic-s2i 
+#### oc new-app --template=eap72-basic-s2i 
  -p IMAGE_STREAM_NAMESPACE=eap 
  -p SOURCE_REPOSITORY_URL=https://github.com/ardlal1989/fetchibmclJSP.git
  -p SOURCE_REPOSITORY_REF=master
