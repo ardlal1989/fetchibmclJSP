@@ -37,8 +37,14 @@ I deployed it on Openshift. Here are the steps:
 
 3>Choose from Languages - Java and then choose Jboss EAP 7.2
 
+![image](https://user-images.githubusercontent.com/50587555/71826785-c67c9c80-30c4-11ea-89ba-f0fb9d253b68.png)
+
 4>Mention the app name of your choice, git repo url, git reference(master if it is kept in your git master branch), context directory value as '.'
 You can leave other fields as is, and click on Next. There you can bind secret or leave it(I did not bind).
+
+![image](https://user-images.githubusercontent.com/50587555/71826839-f166f080-30c4-11ea-8008-274eb33b37eb.png)
+
+![image](https://user-images.githubusercontent.com/50587555/71826871-0774b100-30c5-11ea-8f19-74791bbd8a4c.png)
 
 5>Click on Create
 
