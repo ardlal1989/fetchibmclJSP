@@ -13,13 +13,16 @@ B>This utility helps in listing down all objects(name and extension) that are in
 
 1>This utility can be used by anyone to fetch and list the objects in their IBM Cloud Storage buckets. No customizations are needed.
 
-2>This is an easy to use utility. To use it you can containerize it using docker or any other containerization platform and then deploy it on Kubernetes or any other Container Runtime.You can also try deploying it as a war(In that case you have to check if your application server can access IBM Cloud or not).
+2>This is an easy to use utility. To use it one can containerize it using docker or any other containerization platform and then deploy it on Kubernetes or any other Container Runtime.One can also try deploying it as a war(In that case it has to be checked if the application server can access IBM Cloud or not).
 
 # Pre-Requisites needed to install
 
-I installed/deployed it on Openshift. So all that was needed was an accessible Openshift Web Console and oc cli.
+A> Generate IBM Cloud Access key and Secret key (Include HMAC while generating credentials)
 
-If you want to create application war and then dockerize it, you need the below:
+
+B>To install/deploy on Openshift, all that was needed was an accessible Openshift Web Console and oc cli.
+
+To create application war and then dockerize it, below is what is needed:
 
 1>Spring Boot/Eclipse or any other IDE which supports Maven projects.- (To make any customizations if you want or to run in local or create war from IDE)
 
