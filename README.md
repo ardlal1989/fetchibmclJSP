@@ -50,8 +50,11 @@ Other fields are kept as is.Click on Next. There one can bind secret or leave it
 5>Click on Create
 
 6>From oc cli, one can watch the status of objects such as pods
+
   oc login (using token)
+  
   oc get pods -w -- To view the status of pods
+  
   You can also use web console for the same
   
 7>Create Route from web console to expose it for external access
@@ -68,7 +71,8 @@ oc get route ---> To get the route url
 Once it is deployed you can test it. Sample url is:
 
 https://eap-app-containercrush-project4.inmbzp8022.in.dst.ibm.com/FetchFromIBMCloud-0.0.1-SNAPSHOT/getObjPvtInp  --- For fetch objects
-https://eap-app-containercrush-project4.inmbzp8022.in.dst.ibm.com/FetchFromIBMCloud-0.0.1-SNAPSHOT/listObjectsInput  --- For list objects in bucket  
+
+https://eap-app-containercrush-project4.inmbzp8022.in.dst.ibm.com/FetchFromIBMCloud-0.0.1-SNAPSHOT/listObjectsInput  --- For listing objects in bucket  
 
 If you are not using Openshift, but plan to deploy it as a container (Eg using docker). Here are the steps:
 
