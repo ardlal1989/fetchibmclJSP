@@ -59,6 +59,7 @@ Other fields are kept as is.Click on Next. There one can bind secret or leave it
   
 7>Create Route from web console to expose it for external access
 
+![image](https://user-images.githubusercontent.com/50587555/71830504-e1eba580-30cc-11ea-94aa-80d78432e82b.png)
 
 oc cli can also be used for the same
 
