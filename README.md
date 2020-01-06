@@ -14,7 +14,7 @@ B>This utility helps in listing down all objects(name and extension) that are in
 
 2>This is an easy to use utility. To use it one can containerize it using docker or any other containerization platform and then deploy it on Kubernetes or any other Container Runtime.One can also try deploying it as a war(In that case it has to be checked if the application server can access IBM Cloud or not).
 
-# Pre-Requisites needed to install
+# Pre-Requisites
 
 A> Generate IBM Cloud Access key and Secret key (Include HMAC while generating credentials)
 
@@ -28,7 +28,9 @@ To create application war and then dockerize it, below is what is needed:
 
 3>Docker installed in local(If one wants to use the docker approach)- To create a container image and push the same in an image registry, which can later be used for deployment.
 
-# Steps to Install
+# Steps to Install/Deploy
+
+A> On Openshift
 
 This deployment was done on Openshift. Here are the steps:
 
@@ -49,6 +51,14 @@ Other fields are kept as is.Click on Next. There one can bind secret or leave it
 
 5>Click on Create
 
+Alternatively the above 5 steps can be done through oc cli using the command mentioned below:
+
+oc new-app --template=eap72-basic-s2i 
+ -p IMAGE_STREAM_NAMESPACE=eap 
+ -p SOURCE_REPOSITORY_URL=https://github.com/ardlal1989/fetchibmclJSP.git
+ -p SOURCE_REPOSITORY_REF=master
+ -p CONTEXT_DIR=.
+ 
 6>From oc cli, one can watch the status of objects such as pods
 
   oc login (using token)
@@ -75,15 +85,19 @@ https://eap-app-containercrush-project4.inmbzp8022.in.dst.ibm.com/FetchFromIBMCl
 
 https://eap-app-containercrush-project4.inmbzp8022.in.dst.ibm.com/FetchFromIBMCloud-0.0.1-SNAPSHOT/listObjectsInput  --- For listing objects in bucket  
 
-If you are not using Openshift, but plan to deploy it as a container (Eg using docker). Here are the steps:
+B> On other container platform
+
+If one does not use Openshift, and plans to deploy it as a container (Eg using docker) on some other container platform. Here are the steps:
 
 1>Create a war, using maven(either from IDE or CLI)
 
-2>Containerize using a docker file and push in a image registry. You can run the container on local container runtime or host the pushed image as a container on Kubernetes or any cloud platform.
+2>Containerize using a docker file and push in a image registry. One can run the container on local container runtime or host the pushed image as a container on Kubernetes or any cloud platform.
 
 # Time/ Efforts needed to install
 
-2 hours
+On Openshift: 5-10 mins
+
+Dockerize/Deploy And Use:1.5 hours
 
 # Test Results
 
