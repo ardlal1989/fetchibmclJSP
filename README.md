@@ -52,6 +52,7 @@ https://eap-app-containercrush-project4.inmbzp8022.in.dst.ibm.com/FetchFromIBMCl
 https://eap-app-containercrush-project4.inmbzp8022.in.dst.ibm.com/FetchFromIBMCloud-0.0.1-SNAPSHOT/listObjectsInput  --- For list objects in bucket  
 
 If you are not using Openshift, but plan to deploy it as a container (Eg using docker). Here are the steps:
+
 1>Create a war, using maven(either from IDE or CLI)
 
 2>Containerize using a docker file and push in a image registry. You can run the container on local container runtime or host the pushed image as a container on Kubernetes or any cloud platform.
