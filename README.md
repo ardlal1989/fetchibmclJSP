@@ -69,16 +69,21 @@ If you are not using Openshift, but plan to deploy it as a container (Eg using d
 
 # Test Results
 
-![image](https://user-images.githubusercontent.com/50587555/71827120-8d90f780-30c5-11ea-8ae9-d9f7030e65d6.png)
+## Get Objects
 
 Give the necessary input details
+
+![image](https://user-images.githubusercontent.com/50587555/71827120-8d90f780-30c5-11ea-8ae9-d9f7030e65d6.png)
 
 ![image](https://user-images.githubusercontent.com/50587555/71827297-f4161580-30c5-11ea-8196-a4934cea79ed.png)
 
+## List Objects
+
+Give the necessary input details
 
 ![image](https://user-images.githubusercontent.com/50587555/71827162-a9949900-30c5-11ea-9952-c6c4cf6b7f89.png)
 
-Give the necessary input details
+
 
 ![image](https://user-images.githubusercontent.com/50587555/71827217-c630d100-30c5-11ea-9a9c-5b7fd6a6271c.png)
 
